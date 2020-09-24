@@ -34,7 +34,7 @@ describe('Sending requests to the version endpoints', () => {
   })
 
   test('Api responds with the correct status code and error if a string is missing', async () => {
-    const properTestObject = {
+    const wrongTestObject = {
       string1: '1.1.1'
     }
 
