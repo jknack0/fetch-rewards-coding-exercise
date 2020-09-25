@@ -16,7 +16,6 @@ const normalizeLength = (array, length) => {
 }
 
 const versionCompare = (string1, string2) => {
-  let result = 'equal'
   const split1 = string1.split('.').map(char => parseInt(char))
   const split2 = string2.split('.').map(char => parseInt(char))
   
@@ -27,17 +26,13 @@ const versionCompare = (string1, string2) => {
 
   for(let index = 0; index < maxLength; index++) {
     if(normalized1[index] > normalized2[index]){
-      result = 'after'
-      break
+      return 'after'
     } else if (normalized1[index] < normalized2[index]) {
-      result = 'before'
-      break
-    } else {
-      continue
+      return'before'
     }
   }
   
-  return result
+  return 'equal'
 }
 
 module.exports = versionCompare
