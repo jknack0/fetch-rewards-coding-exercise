@@ -39,7 +39,7 @@ describe('Sending requests to the version endpoints', () => {
     }
 
     const response = await api.post('/api/version')
-      .send(properTestObject)
+      .send(wrongTestObject)
       .expect(400)
       .expect('Content-Type', /application\/json/)
 
