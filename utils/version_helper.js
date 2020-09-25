@@ -15,8 +15,6 @@ const normalizeLength = (array, length) => {
   return array
 }
 
-
-
 const versionCompare = (string1, string2) => {
   let result = 'equal'
   const split1 = string1.split('.')
