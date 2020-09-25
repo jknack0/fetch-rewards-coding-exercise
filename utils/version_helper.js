@@ -17,8 +17,8 @@ const normalizeLength = (array, length) => {
 
 const versionCompare = (string1, string2) => {
   let result = 'equal'
-  const split1 = string1.split('.')
-  const split2 = string2.split('.')
+  const split1 = string1.split('.').map(char => parseInt(char))
+  const split2 = string2.split('.').map(char => parseInt(char))
   
   const maxLength = findMaxLength(split1, split2)
 

@@ -43,7 +43,7 @@ describe('Sending requests to the version endpoints', () => {
       .expect(400)
       .expect('Content-Type', /application\/json/)
 
-    expect(response.body.error).toContain('missing parameter')
+    expect(response.body.error).toContain('Requests to this service require a JSON object with string1 and string2 entries.')
   })
 
   test('Api responds with the correct status code and error if an unknown endpoint is requested', async () => {
