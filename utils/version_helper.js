@@ -1,7 +1,3 @@
-const findMaxLength = (string1, string2) => {
-  return string1.length >= string2.length ? string1.length : string2.length
-}
-
 const normalizeLength = (array, length) => {
   if(array.length === length)
     return array
@@ -19,7 +15,7 @@ const versionCompare = (string1, string2) => {
   const split1 = string1.split('.').map(char => parseInt(char))
   const split2 = string2.split('.').map(char => parseInt(char))
   
-  const maxLength = findMaxLength(split1, split2)
+  const maxLength = Math.max(split1.length, split2.length)
 
   const normalized1 = normalizeLength(split1, maxLength)
   const normalized2 = normalizeLength(split2, maxLength)
